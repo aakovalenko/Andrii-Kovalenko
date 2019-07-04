@@ -31,16 +31,15 @@ reverseString("test");
 
 /* 3 */
 
-/*function getCodeStringFromText(str) {
-
-var uniString = '';
-	for (i = 0; i < str.lenght; i++){
-		uniString += str.charCodeAt(i) . ' ';
+function getCodeStringFromText(str) {
+	let uniStr = '', i;
+	for (i = 0; i < str.length; i++){
+		uniStr += str.charCodeAt(i) + ' ';
 	}
-	return uniString;
-	//console.log(str.charCodeAt(0));
+	return uniStr;
 }
 
-getCodeStringFromText('hello');*/
+var rez = getCodeStringFromText('hello');
+console.log(rez); 
 
 /* 4 */
