@@ -74,3 +74,12 @@ for (i; i <= num; i++){
 
 let rezi = getArray(7);
 console.log(rezi);
+
+/* 6 */
+function doubleArray(arr) {
+	let dblArr;
+	dblArr = arr.concat(arr);
+	return dblArr;
+}
+var arr = doubleArray([1,2,3]);
+console.log(arr);
