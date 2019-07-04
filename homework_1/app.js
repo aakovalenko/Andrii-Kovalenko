@@ -60,3 +60,17 @@ function guessTheNumber(num) {
 }
 
 guessTheNumber(7);
+
+/* 5 */
+
+function getArray(num) {
+	let newArr = [], i = 1;
+for (i; i <= num; i++){
+	newArr.push(i);
+}
+	return newArr;
+	
+}
+
+let rezi = getArray(7);
+console.log(rezi);
