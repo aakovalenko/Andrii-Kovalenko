@@ -83,3 +83,16 @@ function doubleArray(arr) {
 }
 var arr = doubleArray([1,2,3]);
 console.log(arr);
+
+/* 7 */
+function changeCollection() {
+	let newArr = arguments, i = 0;
+
+	for (i; i < newArr.length; i++) {
+		newArr[i].shift(0);
+	}
+	return newArr;
+}
+
+var ava = changeCollection([1,2,3], ['a', 'b', 'c']);
+console.log(ava);
