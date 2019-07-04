@@ -43,3 +43,20 @@ var rez = getCodeStringFromText('hello');
 console.log(rez); 
 
 /* 4 */
+function guessTheNumber(num) {
+	let randomNumber = Math.floor(Math.random() * 10) + 1
+
+		if (typeof num === 'number'){
+				if (num <= 10 && num > 0) {
+						if (num == randomNumber){
+							console.log('Вы выиграли!');
+						} else {
+							console.log(`Вы не угадали ваше число ${num} а выпало число ${randomNumber}`)
+						}
+				}
+		}else {
+			alert('Its not a number');
+		} 
+}
+
+guessTheNumber(7);
