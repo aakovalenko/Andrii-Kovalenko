@@ -14,8 +14,6 @@ function multiply() {
 }
 
 let z = multiply(45,656);
-//console.log(z)
-
 /* 2 */
 
 function reverseString(str) {
@@ -44,9 +42,9 @@ console.log(rez);
 
 /* 4 */
 function guessTheNumber(num) {
-	let randomNumber = Math.floor(Math.random() * 10) + 1
+	let randomNumber = Math.floor(Math.random() * 10) + 1;
 
-		if (typeof num === 'number'){
+		if (typeof num === 'number') {
 				if (num <= 10 && num > 0) {
 						if (num == randomNumber){
 							console.log('Вы выиграли!');
@@ -96,3 +94,15 @@ function changeCollection() {
 
 var ava = changeCollection([1,2,3], ['a', 'b', 'c']);
 console.log(ava);
+
+/* 8 */
+
+
+function funcGetUsers(users, “gender”, “male”) {
+	if (users = Array.isArray(users)) {
+		console.log(users);
+	}
+
+}
+
+funcGetUsers([{name: 'Denis', age: '29', gender: 'male'} , {name: 'Ivan', age: '20', gender: 'male'} ]);
