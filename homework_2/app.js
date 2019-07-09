@@ -1,13 +1,25 @@
-// Arrow function
+//Деструктурирующее присваивание
+// Используя rest оператор и деструктуризацию, создать функцию, которая принимает любое количество аргументов и возвращает объект, содержащий первый аргумент и массив из остатка:
 
-const sum = (...args) => {
-  const params = Array.prototype.slice.call(args);
-  console.log(params);
-  if (!params.length) return 0;
-  const pn = (prev, next) => prev + next;
-  return params.reduce(pn);
+// func(‘a’, ‘b’, ‘c’, ‘d’) → 
+// {
+//   first: ‘a’,
+//   other: [‘b’, ‘c’, ‘d’]
+// }
+
+function retObj() {
+  const abc = arguments;
+
+  const [first, ...other ] = abc;
+
+  let z = [first, other];
+  console.log(typeof z);
+  return z;
 }
 
-let res = sum(1,2,3,4);
-console.log(res);
+let res2 = retObj('a','b','c','d');
+console.log(res2);
+
+
+
 
