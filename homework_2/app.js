@@ -12,7 +12,7 @@ function retObj() {
 
   const [first, ...other ] = abc;
 
-  let z = [first, other];
+  let z = {first, other};
   console.log(typeof z);
   return z;
 }
