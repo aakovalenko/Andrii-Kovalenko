@@ -115,6 +115,32 @@ function callBack4(arr) {
 const res = takeArrWithCallback(['abc', '123'], callBack4);
 //console.log(res);
 
+//5 
+function every(arr = [], func = function(){}) {
+  if (Array.isArray(arr) && typeof func === 'function');
+  //console.log(arr[])
+  for (let j = 0; j < arr.length; j++) {
+    let res = func(arr[j], j, arr);
+   
+    if (res === false) {
+      return false;
+    }else {
+      return true;
+    }
+  }
+}
+
+function callback(el, ind, arr) {
+  //console.log(arr[ind]);
+  if (arr[ind] < 5){
+   return false;
+  } else {
+    return true;
+  }
+}
+
+let z = every([21,31,45,6,8], callback);
+console.log(z);
 
 
 
