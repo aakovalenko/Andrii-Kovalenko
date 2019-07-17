@@ -35,3 +35,25 @@ const price = {
  }
  console.log(objHeight.heightPlusOne());
  console.log(objHeight.height);
+
+ //4
+ const numerator = {
+  value: 1,
+  double: function () {
+    newValue = numerator;
+    newValue.value *= 2;
+    return this;
+  },
+  plusOne: function () {
+    newValue = numerator;
+    newValue.value += 1;
+    return this;
+  },
+  minusOne: function () {
+    newValue = numerator;
+    newValue.value -= 1;
+    return this;
+  },
+}
+console.log(numerator.double().plusOne().plusOne().minusOne());
+console.log(numerator.value);
