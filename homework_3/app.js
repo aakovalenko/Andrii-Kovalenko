@@ -57,3 +57,11 @@ const price = {
 }
 console.log(numerator.double().plusOne().plusOne().minusOne());
 console.log(numerator.value);
+
+//5 
+const productObj = {
+  price: 600,
+  count: 50,
+  totalCost: function () {return this.price * this.count}
+}
+console.log(productObj.totalCost());
