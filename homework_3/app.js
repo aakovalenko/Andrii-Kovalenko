@@ -65,3 +65,27 @@ const productObj = {
   totalCost: function () {return this.price * this.count}
 }
 console.log(productObj.totalCost());
+
+//6
+const detailObj = {
+  count: 345,
+  price: 12.99
+}
+console.log(`Общая стоимость всех деталей - ${productObj.totalCost.call(detailObj)}`);
+
+
+//7
+let sizes = {width: 5, height: 10},
+getSquare = function () {return this.width * this.height};
+console.log(getSquare.call(sizes));
+
+//8 
+
+let element = {
+  height: 25,
+  getHeight: function () {return this.height;}
+};
+//let getElementHeight = element.getHeight;
+getElementHeight = element.getHeight.bind(element);
+console.log(getElementHeight());
+
