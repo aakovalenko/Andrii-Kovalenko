@@ -23,3 +23,15 @@ const price = {
 
  console.log(price.getPrice());
  console.log(price.getPriceWithDiscount());
+
+ //3 
+ const objHeight = {
+   height: 10,
+   heightPlusOne: function() {
+     testObj = objHeight;
+     testObj.height = this.height + 1
+     return this.height;
+    }
+ }
+ console.log(objHeight.heightPlusOne());
+ console.log(objHeight.height);
