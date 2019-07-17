@@ -89,3 +89,33 @@ let element = {
 getElementHeight = element.getHeight.bind(element);
 console.log(getElementHeight());
 
+//9 
+let odd = [1,2,3,5,8,9,10];
+let newOdd = odd.map(function(num) {
+  if (num % 2 > 0) {
+    return {digit: num, odd: false}
+  } else {
+    return {digit: num, odd: true}
+  }
+  
+});
+console.log(newOdd);
+
+
+//10
+let arr = [12, 4, 50, 1, 0, 18, 40];
+function isAboveZero(num) {
+  return num > 0;
+}
+console.log(arr.every(isAboveZero));
+
+//11 
+let arr2 = ['yes', 'hello', 'no', 'easycode', 'what'];
+
+function moreThenThreeLetters(str) {
+  return str.length > 3;
+}
+console.log(arr2.some(moreThenThreeLetters));
+
+
+
