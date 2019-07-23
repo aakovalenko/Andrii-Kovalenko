@@ -171,7 +171,13 @@ btn.addEventListener('click', handler => {
 });
 
 
-//3. При нажатии на любой узел документа показать в элементе с id=tag имя тега нажатого элемента.
+//10. При нажатии на любой узел документа показать в элементе с id=tag имя тега нажатого элемента.
+
+const allDoc = document.body;
+
+allDoc.addEventListener('click', handler => {
+  document.querySelector("#tag").textContent = 'Tag: '+handler.target.tagName
+})
 
 
 
