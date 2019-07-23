@@ -127,6 +127,13 @@ myTable.appendChild(userTr);
 
 console.log(users.length);
 
+// const sortButton = document.querySelector('#sort');
+
+// sortButton.addEventListener('click', e => {
+//   const userSort = users.sort((prevUser, nextUser) => prevUser.balance - nextUser.balance);
+//   console.log(userSort);
+// });
+
 for (z = 0; z < users.length; z++) {
   
   for (let i = 0; i < users.length; i++) {
@@ -179,6 +186,23 @@ allDoc.addEventListener('click', handler => {
   document.querySelector("#tag").textContent = 'Tag: '+handler.target.tagName
 })
 
+//11
+// Из презентации “Занятие 7 - Манипуляция DOM. Работа с атрибутами.” дополнить функционал
+// для таблицы из задачи 6. Создать кнопку которая будет при клике сортировать пользователей по
+// возрастанию и убыванию поля balance при этом в кнопке должна показываться стрелка в какую
+// сторону сейчас отсортированы пользователи. Иконки можете взять с font awesome, в качестве
+// фреймворка использовался bootstrap
+
+
+
+
+const sortButton = document.querySelector('#sort');
+
+sortButton.addEventListener('click', e => {
+  const userSort = users.sort((prevUser, nextUser) => prevUser.balance - nextUser.balance);
+  sortButton.textContent = "SORT \&#11015";
+  console.log(userSort);
+})
 
 
 
