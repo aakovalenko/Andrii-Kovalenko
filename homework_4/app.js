@@ -90,7 +90,6 @@ const users = [
 ];
 
 const resultBalanceUser = users.reduce( (acc,user) => {
-  
   return acc + user.balance;
 },0);
 
@@ -134,12 +133,14 @@ console.log(users.length);
 //   console.log(userSort);
 // });
 
-for (z = 0; z < users.length; z++) {
+function tableUserArr(arrTblUsr = users) {
+
+for (z = 0; z < arrTblUsr.length; z++) {
   
-  for (let i = 0; i < users.length; i++) {
+  for (let i = 0; i < arrTblUsr.length; i++) {
     const userTrNextGen = document.createElement("tr");
 
-    const {name, email, balance} = users[i];
+    const {name, email, balance} = arrTblUsr[i];
 
     const tdDomEl = document.createElement('td');
     tdDomEl.textContent = i + 1 ;
@@ -162,6 +163,8 @@ for (z = 0; z < users.length; z++) {
   }
   break;
 }
+}tableUserArr();
+
 
 myTable.appendChild(userTrBalance);
 userTrBalance.appendChild(emptyTdBalance);
@@ -183,7 +186,7 @@ btn.addEventListener('click', handler => {
 const allDoc = document.body;
 
 allDoc.addEventListener('click', handler => {
-  document.querySelector("#tag").textContent = 'Tag: '+handler.target.tagName
+  document.querySelector("#tag").textContent = 'Tag: '+handler.target.tagName;
 })
 
 //11
@@ -200,9 +203,12 @@ const sortButton = document.querySelector('#sort');
 
 sortButton.addEventListener('click', e => {
   const userSort = users.sort((prevUser, nextUser) => prevUser.balance - nextUser.balance);
+ 
   sortButton.textContent = "SORT \&#11015";
-  console.log(userSort);
-})
+  tableUserArr(userSort);
+});
+//зашел в тупик, не знаю как переписать чтобы удалить вызов предыдущей функции и подставить вызов отсортированой! И не нашел как сделать сортировку ри большего к меньшим и наоборот при нажатии
+
 
 
 
